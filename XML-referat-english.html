@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC>
+<meta charset='utf-8'> 
+<HTML>
+<HEAD>
+	<TITLE></TITLE>
+</HEAD>
+<BODY>
+	<NAV>
+		<UL>
+			<LI>Въведение</LI>
+			<LI>Какво е XML?</LI>
+			<LI>Какво е JSON?</LI>
+			<LI>Какво е YAML?</LI>
+			<LI>Кратка история: XML, после JSON, после какво?</LI>
+			<LI>Обработка на данни и представяне</LI>
+			<LI>Ресурси</LI>
+		</UL>
+	</NAV>
+	<ARTICLE>
+		<H1>Въведение</H1>
+
+		<P>XML is commonly utilized for web application messaging – sending information back to a browser from a web server, or sending information between web accommodations. It’s dead facile to do this and it works very well, hence XML has become the de-facto cull for data exchange for web applications. Alternatives such as YAML and JSON have found consequential support in recent years. Both aim to be a more felicitous alternative to XML in some cases.</P>
+
+		<P>XML might not be the best cull in all cases, but that’s no revelation</P>
+
+		<P>As we understand XML is not ideal, and JSON or YAML may be more preponderant in some cases. JSON might be more expeditious, YAML might be more preponderant (and more comely). Both YAML and JSON needs twice as much memory as XML while decoding.</P>
+
+		<P>As far as JSON is concerned, if you’re not utilizing Javascript, there isn’t much persuasive relevancy. The reason that JSON is so nice in web development is that it is instantly perceived by the browser’s JS interpreter as an object so there’s no adscititious parsing obligatory. This is only true in Javascript, though. Any other language requires a custom library to interpret JSON.</P>
+
+		<P>XML supports structured data format language whereas  JSON and YML supports structured data interchange formats.</P>
+
+		<P>YAML’s finesses, subtle variations in the grammar that sanction you to indite special cases in a more concise style. The upshot is that YAML endeavors to look homogeneous to a W3C standard, and engenders a minuscule library of hard to read literature concerning its concepts and rules.</P>
+	</ARTICLE>
+
+	<ARTICLE>
+		<H1>Какво е XML?</H1>
+
+		<P>Extensible Markup Language (XML) is used to describe data. The XML standard is a flexible way to create information formats and electronically share structured data via the public Internet, as well as via corporate networks.</P>
+
+		<P>XML code, a formal recommendation from the World Wide Web Consortium (W3C), is similar to Hypertext Markup Language (HTML). Both XML and HTML contain markup symbols to describe page or file contents. HTML code describes Web page content (mainly text and graphic images) only in terms of how it is to be displayed and interacted with.</P>
+
+		<P>XML data is known as self-describing or self-defining, meaning that the structure of the data is embedded with the data, thus when the data arrives there is no need to pre-build the structure to store the data; it is dynamically understood within the XML. The XML format can be used by any individual or group of individuals or companies that want to share information in a consistent way. XML is actually a simpler and easier-to-use subset of the Standard Generalized Markup Language (SGML), which is the standard to create a document structure.</P>
+
+		<P>The basic building block of an XML document is an element, defined by tags. An element has a beginning and an ending tag. All elements in an XML document are contained in an outermost element known as the root element. XML can also support nested elements, or elements within elements. This ability allows XML to support hierarchical structures. Element names describe the content of the element, and the structure describes the relationship between the elements.</P>
+	</ARTICLE>
+
+	<ARTICLE>
+		<H1>Какво е JSON?</H1>
+
+		<P>JSON (Javascript Object Notation) is a text-based, human-readable data interchange format used for representing simple data structures and objects in Web browser-based code. JSON is also sometimes used in desktop and server-side programming environments. JSON was originally based on the Javascript programming language and was introduced as the page scripting language for the Netscape Navigator Web browser.</P>
+
+		<P>JSON is used in Javascript on the Internet as an alternative to XML for organizing data. Like XML, JSON is language-independent and may be combined with C++, Java, Python, Lisp and many other languages. Unlike XML, however, JSON is simply a way to represent data structures, as opposed to a full markup language. JSON documents are relatively lightweight and are rapidly executed on Web server.</P>
+
+		<P>JSON consists of "name : object" pairs and punctuation in the form of brackets, parentheses, semi-colons and colons. Each object is defined with an operator like "text :" or "image :" and then grouped with a value for that operator. The simple structure and absence of mathematical notation or algorithms, JSON is easy to understand and quickly mastered, even by users with limited formal programming experience, which has spurred adoption of the format as a quick, approachable way to create interactive pages.</P>
+
+		<P>Novice users of JSON need to be aware of potential security implications. As JSON scripts automatically execute in any Web page that's requested by a Web browser, they can be used to implement JavaScript insertion attacks against a Web client, like a command injection or cross-site scripting. For example, if a hacker inserts non-JSON code into the string, like a Trojan horse, the targeted algorithm executes the text in as if it were Javascript and then returns the value of the last statement. If the only statement was a JSON value, there's no effect. If a previous statement contains other Javascript code, however, that code will be executed by the script. The hacker might then have access to all the variables a script has access to, potentially compromising a user's PC.</P>
+	</ARTICLE>
+	<ARTICLE>
+		<H1>Какво е YAML?</H1>
+
+		<P>YAML, or "YAML Ain't Markup Language", is "a human friendly data serialization standard for all programming languages." It has the advantage of leaning towards dynamic languages a la Python, Ruby, etc.</P>
+
+		<P>It is important to note that friendliness and readability are very core to the design of YAML. The number of format characters is very low and, like Python, YAML's markup can use whitespace to indicate scoping of items. Tabs are not allowed, so there is no chance for confusion about indention level. Additionally, the constructs within YAML such as mappings, sequences, and scalars all mesh nicely with existing Python data types like dictionaries, lists, strings, and integers. It's also fully unicode-enabled, which should make happy a lot of people who are normally worried about UTF-8.</P>
+
+		<P>What really attracted me to YAML are some of the key things that drew me to Python: cleanliness and approachability. Too often, I've had to deal with monstrous XML files for data passing or -- worse yet -- configuration and sometimes ini-style configuration files that simply don't scale, or communicate enough information. So far, I've used YAML in about six different projects with great success and found that it scales quite well while staying human-readable.</P>
+	</ARTICLE>
+
+	<ARTICLE>
+		<H1>Кратка история: XML, после JSON, после какво?</H1>
+
+		<P>Data representation, a seemingly simple problem, is proving intractable as one standard after another fails to deliver what is needed.</P>
+
+		<P>The need for a format to serialize data is as old as networking itself. In the early days of data processing, the problem was attacked by use of binary protocols — that is, protocols with data that was not human readable. These were frequently custom-defined on an ad hoc basis. The sender and receiver had to agree on where fields were located and what they contained in order to exchange data. These schemes eventually gave way, in part, to emerging standards such as ASN.1.</P>
+
+		<P>One of the most successful of these early protocols came from the UNIX world in the mid-1980s, as servers needed some way to exchange data. The resulting XDR format, proposed by Sun, solved one key problem; namely, how to exchange binary data when systems used different endian schemes — a constant problem in the UNIX heyday. XDR was quietly successful and is still found today in NFS and other protocols, as well as in modern products such as Mozilla's SpiderMonkey JavaScript engine where it's used for serializing compiled JavaScript.</P>
+
+		<P>By the mid-1990s, under pressure from the rapidly growing Internet, new standards were needed. XDR, for example, was not human-readable and it was generally felt that a human-readable representation that was in keeping with SGML — the markup superset from which HTML is derived — would be a good thing. This turned out to be XML. And by the end of the century, it was already in wide use. All major languages had XML libraries and the format was used whenever and wherever any kind of human representation of data was required. It proved so popular that it moved into areas it was never intended to be, such as text mark-up (in DocBook, for example). The addition of secondary XML technologies, such as XSLT, enabled this.</P>
+
+		<P>However, for all its popularity, XML has several significant drawbacks. The first one is the complexity of schemata, which require specialized skills to implement correctly. The second, and by far the biggest factor, is performance. XML is wordy and slow to process. A senior architect at a financial services firm told me recently that in order to optimize the performance of their key business logic servers, they'd done a deep analysis of what exactly was happening with each transaction. They discovered, to their dismay, that almost 50% of their server CPU cycles were consumed encoding and decoding XML. Other organizations have surely recognized, at various points, the significant processing overhead that XML imposes.</P>
+
+		<P>Predictably, a smaller alternative emerged over the last few years as the JavaScript revolution has reshaped software development: JSON. Standard JSON can be read as JavaScript and it has the additional benefit of being widely supported with various tools and libraries. However, as its use has been extended to new areas, such as databases, it's become clear that it lacks some desirable traits. Two of them are that it has no support for a date data type and it doesn't support comments. These shortcomings have already led to variants, such as BSON, the binary JSON format devised by 10gen and used in their MongoDB NoSQL database, instead of JSON.</P>
+
+		<P>Frustration with JSON has spurred examination and proposal of entirely new schemes. Perhaps one of the most interesting is TOML from Tom Preston-Werner, a cofounder of GitHub. It has the brevity of JSON, although it uses a different notational scheme, that's akin to configuration files with key-value pairs specified one per line and grouped by bracketed item names. It's a take-off on the format of .ini files first popularized by Microsoft, but with many conveniences added in. While there are already libraries in several languages supporting it, it's not clear if TOML will gain sufficient traction. TOML is by no means the only alternative under development. For example,  Protocol Buffers is a low-overhead, high-speed data exchange format of particular appeal to C and C++ programmers, that was developed at Google and is widely used there.</P>
+
+		<P>In my estimation, the one standard that seems to have almost all the desirable features is YAML. While a big standard (some 80 pages), it is remarkably concise in practice and highly readable. It borrows Python's use of whitespace to indicate the start and end of blocks and subblocks. YAML mostly avoids quotation marks, brackets, braces, and open/close-tags, which enhances its readability. It also contains references, which are ways to refer to a previously defined element. So, if an element is repeated later in a YAML document, you can simply refer to the element using a short-hand name. Finally, YAML supports all the standard data types and can map easily to lists, hashes, or simply individual data items.</P>
+
+		<P>YAML is widely supported by libraries in all the principal languages. Its biggest drawback seems to be political rather than technical; namely, that it has not gained the kind of mindshare that would give it the wide acceptance any such protocol needs. Still, if your goal is to elegantly solve the problem of data serialization, especially for internal use, YAML might be exactly the solution you're looking for.</P>
+	</ARTICLE>
+	<ARTICLE>
+		<H1>Обработка на данни и представяне</H1>
+
+		<P>The XML and YAML specifications provide very different logical models for data node representation, processing, and storage.</P>
+
+		<P>XML: The primary logical structures in an XML instance document are: 1) element, and 2) attribute. For these primary logical structures, the base XML specification does not define constraints regarding such factors as duplication of elements or the order in which they are allowed to appear. In defining conformance for XML processors, the XML specification generalizes them into two types: 1) validating, and 2) non-validating. The XML specification asserts no detailed definitions for an API, processing model, or data representation model; although several are defined in separate specifications that a user or specification implementer may choose independently. These include the Document Object Model and XQuery.</P>
+
+		<P>A richer model for defining valid XML content is the W3C XML Schema standard. This allows for full specification of valid XML content and is supported by a wide range of open-source, free and commercial processors and libraries.</P>
+
+		<P>YAML: The primary logical structures in a YAML instance document are: 1) scalar, 2) sequence, and 3) mapping. The YAML specification also indicates some basic constraints that apply to these primary logical structures. For example, according to the specification, mapping keys do not have an order. In every case where node order is significant, a sequence must be used.</P>
+
+		<P>Moreover, in defining conformance for YAML processors, the YAML specification defines two primary operations: 1) dump; and 2) load. All YAML-compliant processors must provide at least one of these operations, and may optionally provide both. Finally, the YAML specification defines an information model or "representation graph", which must be created during processing for both dump and load operations, although this representation need not be made available to the user through an API.</P>
+	</ARTICLE>
+
+	<ARTICLE>
+		<H1>Ресурси</H1>
+		<P>
+			<A HREF="http://www.geektantra.com/2014/11/xml-vs-yaml-vs-json/">XML vs YAML vs JSON</A> <BR/>
+			<A HREF="http://www.drdobbs.com/web-development/after-xml-json-then-what/240151851">After XML, JSON: Then What?</A><BR/>
+			<A HREF="http://beust.com/weblog/2010/08/15/yaml-the-forgotten-victim-of-the-format-wars/">YAML, the forgotten victim of the format wars</A><BR/>
+			<A HREF="http://www.gamedev.net/topic/646884-yaml-vs-json-vs-xml/">YAML vs JSON vs XML? Forum Post</A><BR/>
+			<A HREF="http://stackoverflow.com/questions/1308536/yaml-compared-to-xml">YAML compared to XML</A><BR/>
+			<A HREF="http://en.wikipedia.org/wiki/YAML#Comparison_to_other_data_structure_format_languages">Comparison to other data structure format languages</A><BR/>
+		</P>
+	</ARTICLE>
+</BODY>
+</HTML>
