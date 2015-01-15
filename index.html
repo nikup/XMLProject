@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>XML vs JSON vs YAML</title>>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>XML vs JSON vs YAML<h2>
+					<h4>Николина Гюрова</h4>
+					<h4>61601</h4>
+					<br/>
+					<h4><a href="http://about.me/nikki.gyurova">about.me/nikki.gyurova</a></h4>
+				</section>
+				<section>
+					<h3>Years Started</h3>
+					<center><table>
+						<tr>
+							<td width="150px"> XML </td>
+							<td width="150px"> JSON </td>
+							<td width="150px"> YAML </td>
+						</tr>
+						<tr>
+							<td> 1996 </td>
+							<td> 2001 </td>
+							<td> 2001 </td>
+						</tr>
+					</table></center>
+				</section>
+
+				<section>
+					<h3>Who uses it for data storage?</h3>
+					<center><table>
+						<tr>
+							<td width="150px"> XML </td>
+							<td width="150px"> JSON </td>
+							<td width="150px"> YAML </td>
+						</tr>
+						<tr>
+							<td> Everyone </td>
+							<td> JavaScript </td>
+							<td> Python and Ruby </td>
+						</tr>
+					</table></center>
+				</section>
+
+				<section>
+					<h3>Main advantage</h3>
+					<center><table>
+						<tr>
+							<td width="150px"> XML </td>
+							<td width="150px"> JSON </td>
+							<td width="150px"> YAML </td>
+						</tr>
+						<tr>
+							<td> Portable </td>
+							<td> Light and fast, <br/> Native for JavaScript </td>
+							<td> Light and fast, Pretty </td>
+						</tr>
+					</table></center>
+				</section>
+
+				<section>
+					<h3>Disadvantages?</h3>
+					<center><table>
+						<tr>
+							<td width="150px"> XML </td>
+							<td width="150px"> JSON </td>
+							<td width="150px"> YAML </td>
+						</tr>
+						<tr>
+							<td> Bulky and slow, <br/>too much CPU usage </td>
+							<td> Heavy on RAM, <br/>needs additional library (except in JS) </td>
+							<td> Heavy on RAM, <br/>needs additional library </td>
+						</tr>
+					</table></center>
+				</section>
+
+				<section>
+					<h3>Examples - XML</h3>
+					<pre><code><anagrafica>
+	<record>
+		<codice_cliente>5</codice_cliente>
+		<rag_soc>Miami American Cafe</rag_soc>
+		<codice_fiscale>IT07654930130</codice_fiscale>
+		<indirizzo tipo="casa">Viale Carlo Espinasse 5, Como</indirizzo>
+		<num_prodotti>13</num_prodotti>
+	</record>
+</anagrafica></code></pre>
+				</section>
+				
+				<section>
+					<h3>Examples - JSON</h3>
+					<pre><code>"anagrafica": {
+    "record": [
+      {
+        "codice_cliente": "5",
+        "rag_soc": "Miami American Cafe",
+        "codice_fiscale": "IT07654930130",
+        "indirizzo": {
+          "-tipo": "casa",
+          "#text": "Viale Carlo Espinasse 5, Como"
+        },
+        "num_prodotti": "13"
+      }
+      ]
+  }</code></pre>
+				</section>
+
+				<section>
+					<h3>Examples - YAML</h3>
+					<pre><code>
+anagrafica:
+record: 
+  - 
+    codice_cliente: "5"
+    rag_soc: "Miami American Cafe"
+    codice_fiscale: "IT07654930130"
+    indirizzo: 
+      -tipo: "casa"
+      #text: "Viale Carlo Espinasse 5, Como"
+    num_prodotti: "13"</code></pre>
+				</section>
+
+				<section>
+					<h3><a href="http://nikup.github.io/XMLProject">nikup.github.io/XMLProject</a></h3>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
